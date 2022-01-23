@@ -2,7 +2,7 @@ import classes from './comment-list.module.css';
 
 function CommentList({ comments }) {
   // console.log(comments);
-  return (
+  return comments.length === 0  ? 'No Comments Found' : (
     <ul className={classes.comments}>
       {comments.map(comment => (
         <li key={comment._id}>
